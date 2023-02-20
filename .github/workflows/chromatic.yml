@@ -42,12 +42,14 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v1
-      - run: |
-          cd ./client
-          yarn
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Required to retrieve git history
+      - run: cd ./client
+      - run: yarn
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
