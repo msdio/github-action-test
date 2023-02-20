@@ -15,7 +15,7 @@ jobs:
     # list of steps of actions
     steps:
       - uses: actions/checkout@v1
-        run: |
+      - run: |
           cd ./client
           yarn
         #👇 Adds Chromatic as a step in the workflow
@@ -25,4 +25,3 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          workingDir: client
