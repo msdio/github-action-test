@@ -40,7 +40,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          cd ./client/out
+          cd ./client
           aws s3 sync . ${{ secrets.AWS_S3_BUCKET_NAME }} --acl public-read --delete
 
       # - name: Invalidate Cache On CloudFront
