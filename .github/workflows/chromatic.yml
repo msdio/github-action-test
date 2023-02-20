@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     # list of steps of actions
     steps:
-      - name: Check repository
       - uses: actions/checkout@v1
         run: cd ./client
       - name: Install dependencies
