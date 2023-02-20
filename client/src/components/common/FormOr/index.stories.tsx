@@ -10,7 +10,7 @@ export default {
   component: FormOr,
 } as ComponentMeta<typeof FormOr>;
 
-const Template: ComponentStory<typeof FormOr> = (args) => {
+const Template: ComponentStory<typeof FormOr> = () => {
   return (
     <ChakraProvider theme={theme}>
       <FormOr />
