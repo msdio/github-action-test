@@ -47,8 +47,7 @@ jobs:
       - run: |
           cd ./client
           yarn
-      - name: Build Storybook
-      - run: yarn build-storybook
+          yarn build-storybook
 
         #👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
