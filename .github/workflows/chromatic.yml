@@ -31,6 +31,6 @@ jobs:
         # Options required for Chromatic's GitHub Action
         with:
           workingDir: client
-          onlyChanged: true
+          onlyChanged: True
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
